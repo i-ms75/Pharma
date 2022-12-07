@@ -1,0 +1,71 @@
+2022-12-04 23:10:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "medicine" not found (this database is empty); SQL statement:
+select medicines0_."id" as id1_0_, medicines0_."batch_no" as batch_no2_0_, medicines0_."bill_no" as bill_no3_0_, medicines0_."company_name" as company_4_0_, medicines0_."expiry_date" as expiry_d5_0_, medicines0_."free_quantity" as free_qua6_0_, medicines0_."manufacturing_date" as manufact7_0_, medicines0_."name" as name8_0_, medicines0_."payment" as payment9_0_, medicines0_."payment_on_purchase" as payment10_0_, medicines0_."purchased_on" as purchas11_0_, medicines0_."quantity" as quantit12_0_, medicines0_."remarks" as remarks13_0_, medicines0_."retail_per_tablet" as retail_14_0_, medicines0_."retail_rate_strip" as retail_15_0_, medicines0_."stock_point" as stock_p16_0_, medicines0_."tablet_per_strip" as tablet_17_0_, medicines0_."wholesale_rate" as wholesa18_0_ from public."medicine" medicines0_ [42104-214]
+2022-12-04 23:13:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "medicine" not found (this database is empty); SQL statement:
+select medicines0_."id" as id1_0_, medicines0_."batch_no" as batch_no2_0_, medicines0_."bill_no" as bill_no3_0_, medicines0_."company_name" as company_4_0_, medicines0_."expiry_date" as expiry_d5_0_, medicines0_."free_quantity" as free_qua6_0_, medicines0_."manufacturing_date" as manufact7_0_, medicines0_."name" as name8_0_, medicines0_."payment" as payment9_0_, medicines0_."payment_on_purchase" as payment10_0_, medicines0_."purchased_on" as purchas11_0_, medicines0_."quantity" as quantit12_0_, medicines0_."remarks" as remarks13_0_, medicines0_."retail_per_tablet" as retail_14_0_, medicines0_."retail_rate_strip" as retail_15_0_, medicines0_."stock_point" as stock_p16_0_, medicines0_."tablet_per_strip" as tablet_17_0_, medicines0_."wholesale_rate" as wholesa18_0_ from public."medicine" medicines0_ [42104-214]
+2022-12-07 10:36:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "medicine" not found (this database is empty); SQL statement:
+select medicines0_."id" as id1_0_, medicines0_."batch_no" as batch_no2_0_, medicines0_."bill_no" as bill_no3_0_, medicines0_."company_name" as company_4_0_, medicines0_."expiry_date" as expiry_d5_0_, medicines0_."free_quantity" as free_qua6_0_, medicines0_."manufacturing_date" as manufact7_0_, medicines0_."name" as name8_0_, medicines0_."payment" as payment9_0_, medicines0_."payment_on_purchase" as payment10_0_, medicines0_."purchased_on" as purchas11_0_, medicines0_."quantity" as quantit12_0_, medicines0_."remarks" as remarks13_0_, medicines0_."retail_per_tablet" as retail_14_0_, medicines0_."retail_rate_strip" as retail_15_0_, medicines0_."stock_point" as stock_p16_0_, medicines0_."tablet_per_strip" as tablet_17_0_, medicines0_."wholesale_rate" as wholesa18_0_ from public."medicine" medicines0_ [42104-214]
+2022-12-07 11:40:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "CONSTRAINT_C" already exists; SQL statement:
+ALTER TABLE "PUBLIC"."medicine" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_C" PRIMARY KEY("id") [90045-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:109)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:72)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-12-07 18:26:45 jdbc[53]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]spript"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+spript [42001-214]
+2022-12-07 18:26:53 jdbc[53]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]spriptTO"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+spriptTO [42001-214]
