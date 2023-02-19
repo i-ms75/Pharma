@@ -1,5 +1,6 @@
 package com.example.Pharma.controller;
 
+import com.example.Pharma.DTO.Product;
 import com.example.Pharma.entity.Medicines;
 import com.example.Pharma.model.MedicineEntry;
 import com.example.Pharma.service.ServiceImpl;
@@ -10,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -31,12 +33,44 @@ public class PharmaController
         ResponseEntity<String> responseEntity;
         List<Medicines> medicinesList;
         medicinesList=medicineService.findAllMedicines();
+
         System.out.println(medicinesList);
 
         responseEntity=new ResponseEntity(medicinesList, HttpStatus.OK);
         return responseEntity;
     }
+    @CrossOrigin(value = "http://localhost:4200")
+    @PostMapping(value = "/pos")
+    public ResponseEntity<String>savePos(@RequestBody List<Product> cart)
+    {
+        System.out.println(cart.listIterator());
+        for(Product p:cart)
+        {
+            System.out.println(p.getName());
+        }
+        ResponseEntity<String> responseEntity;
+        responseEntity=new ResponseEntity(HttpStatus.OK);
+        return responseEntity;
+    }
 
+
+//    to retrieve list of medicines
+
+
+
+    // to select specific columns from the database
+//    @CrossOrigin(value = "http://localhost:4200")
+//    @RequestMapping(value = "/searchMedicines",method = RequestMethod.GET)
+//    public ResponseEntity<String> getSelectedDetails(/*@RequestBody MedicineEntry medicineEntry*/)
+//    {
+//        MedicineEntry md=new MedicineEntry();
+//        ResponseEntity<String> responseEntity;
+//        List<Object[]> medicinesList;
+//        medicinesList=medicineService.findSelectedColumns();
+//        System.out.println(medicinesList);
+//        responseEntity=new ResponseEntity(medicinesList, HttpStatus.OK);
+//        return responseEntity;
+//    }
 
 
   /*  public ResponseEntity<String> searchCompanyByNameAndID(@RequestBody Incoming incoming)
@@ -70,4 +104,30 @@ public class PharmaController
         }
 
    */
+
+
+//    @GetMapping("/searchPolygon")
+//    public ResponseEntity<String> search(@RequestBody String polygonClassification)
+//    {
+//        ResponseEntity<String> responseEntity;
+//        List<String> polygonClassificationList;
+//        if(polygonClassification!=null)
+//        {
+//            polygonClassificationList=medicineService.getPolygon();
+//            if(polygonClassificationList.isEmpty())
+//            {
+//                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//            }
+//            responseEntity=new ResponseEntity(polygonClassificationList, HttpStatus.OK);
+//            return responseEntity;
+//        }
+//       else
+//        {
+//            polygonClassificationList=null;
+//            System.out.println("value not received from the front end");
+//            responseEntity=new ResponseEntity(polygonClassificationList, HttpStatus.NO_CONTENT);
+//        }
+//       return responseEntity=new ResponseEntity(polygonClassificationList,HttpStatus.OK);
+//    }
+
 }

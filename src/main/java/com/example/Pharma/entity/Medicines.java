@@ -13,8 +13,9 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "\"MEDICINE\"",schema = "public")
 @Entity
+@Table(name = "\"medicine\"",schema = "public")
+
 
 public class Medicines
 {
