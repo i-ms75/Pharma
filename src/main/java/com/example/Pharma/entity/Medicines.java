@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "\"medicine\"",schema = "public")
+@Table(name = "\"MEDICINE\"",schema = "public")
 
 
 public class Medicines
@@ -42,10 +42,10 @@ public class Medicines
     private Date Manufacturing_Date;
 
     @Column(name = "\"Wholesale_Rate\"")
-    private String Wholesale_Rate;
+    private Integer Wholesale_Rate;
 
     @Column(name = "\"Retail_Rate_Strip\"")
-    private String Retail_Rate_Strip;
+    private Integer Retail_Rate_Strip;
 
     @Column(name = "\"Remarks\"")
     private String Remarks;
@@ -72,7 +72,7 @@ public class Medicines
     private String Bill_No;
 
     @Column(name = "\"Purchased_On\"")
-    private String Purchased_On;
+    private Date Purchased_On;
 
     @Column(name = "\"Payment_On_Purchase\"")
     private String Payment_On_Purchase;
@@ -84,3 +84,9 @@ public class Medicines
     //private Date createdDate;
 
 }
+
+
+
+
+
+

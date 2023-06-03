@@ -1685,3 +1685,42 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	... 17 more
+2023-05-28 00:12:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEDICINE" not found (candidates are: "medicine"); SQL statement:
+SELECT * from Medicine [42103-214]
+2023-05-28 00:14:58 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEDICINE" not found (candidates are: "medicine"); SQL statement:
+SELECT * from medicine [42103-214]
+2023-05-28 00:16:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEDICINE" not found (candidates are: "medicine"); SQL statement:
+SELECT * from public.medicine [42103-214]
+2023-05-28 00:17:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MEDICINE" not found (candidates are: "medicine"); SQL statement:
+SELECT * from public.medicine [42103-214]
+2023-05-28 01:05:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]INFORMATION_SCHEMA.COLLATIONS"; expected "INSERT"; SQL statement:
+INFORMATION_SCHEMA.COLLATIONS [42001-214]
+2023-05-28 01:06:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]id INFORMATION_SCHEMA.CHECK_CONSTRAINTS"; expected "INSERT"; SQL statement:
+id INFORMATION_SCHEMA.CHECK_CONSTRAINTS [42001-214]
+2023-05-28 01:06:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]INFORMATION_SCHEMA.CHECK_CONSTRAINTS"; expected "INSERT"; SQL statement:
+INFORMATION_SCHEMA.CHECK_CONSTRAINTS [42001-214]
+2023-05-28 01:07:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]INFORMATION_SCHEMA.USERS"; expected "INSERT"; SQL statement:
+INFORMATION_SCHEMA.USERS [42001-214]
+2023-05-28 01:17:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]mysqldump -u sa -p password Pharmacy  output_file.sql"; expected "MERGE"; SQL statement:
+mysqldump -u sa -p password Pharmacy  output_file.sql [42001-214]
+2023-05-28 01:30:10 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.CHECK_CONSTRAINTS INFORMATION_SCHEMA[*].COLUMNS"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.CHECK_CONSTRAINTS INFORMATION_SCHEMA.COLUMNS [42000-214]
+2023-05-28 01:30:18 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]INFORMATION_SCHEMA.COLUMNS"; expected "INSERT"; SQL statement:
+INFORMATION_SCHEMA.COLUMNS [42001-214]
+2023-05-28 01:30:41 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select table [*]from INFORMATION_SCHEMA.COLUMNS"; expected "identifier"; SQL statement:
+select table from INFORMATION_SCHEMA.COLUMNS [42001-214]
+2023-05-28 01:32:46 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "POS" not found; SQL statement:
+drop table pos [42102-214]
